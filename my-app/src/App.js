@@ -3,6 +3,7 @@ import './App.css';
 import MiComponente from './MiComponente';
 import { SComponente } from './SComponente';
 import { TComponente } from './TComponente';
+import { Eventos } from './Eventos';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <TComponente 
           ficha={ficha_medica}
         />
+        <Eventos/>
       </header>
     </div>
   );
