@@ -1,4 +1,6 @@
- import React from 'react'
+ import React from 'react';
+ import PropTypes from 'prop-types';
+
  
  export const TComponente = ({nombre,apellido,ficha}) => {
 
@@ -14,5 +16,11 @@
         </ul>
      </div>
    )
- }
+}
+
+TComponente.propTypes = {
+    nombre: PropTypes.string.isRequired,
+    apellido: PropTypes.string,
+    ficha: PropTypes.object
+}
  

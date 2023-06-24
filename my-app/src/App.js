@@ -12,6 +12,8 @@ function App() {
     estado: "Bueno"
   }
 
+  const numero = 12345;
+
   return (
     <div className="App">
       <header className="App-header">
