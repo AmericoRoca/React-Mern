@@ -23,8 +23,6 @@ function App() {
         <SComponente/>
         <hr/>
         <TComponente 
-          nombre="Americo"
-          apellido="Chiclana"
           ficha={ficha_medica}
         />
       </header>

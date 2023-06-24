@@ -23,4 +23,10 @@ TComponente.propTypes = {
     apellido: PropTypes.string,
     ficha: PropTypes.object
 }
+
+TComponente.defaultProps = {
+    nombre: "Americo",
+    apellido: "Chiclana"
+}
+
  
