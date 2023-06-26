@@ -14,6 +14,14 @@ export const Eventos = () => {
       alert("Has"+accion+ "a la caja");
     }
 
+    const estasDentro = (e) =>{
+      console.log("Estas dentro")
+    }
+
+    const estasFuera = (e) =>{
+      console.log("Estas fuera")
+    }
+
 
   return (
     <div>
@@ -29,6 +37,10 @@ export const Eventos = () => {
           {/*entrar y salir raton*/}
           Pasa por encima
         </div>
+
+        <p>
+          <input type="text" onFocus={ estasDentro } placeholder="Nombre" onBlur={ estasFuera }></input>
+        </p>
     </div> 
   )
 }
