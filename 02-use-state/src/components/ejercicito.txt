@@ -1,0 +1,12 @@
+Crear componente
+
+Recibir una prop con el año actual
+
+Usar estados y eventos para tener dos botones
+    - pasar proximo año
+    - Ir al año anterior
+    Motrar todo por pantalla
+
+Validad que el año sea un numero y que sea requerido
+
+Cambiar el año mediante un input de texto y que cambie dinamicamente
