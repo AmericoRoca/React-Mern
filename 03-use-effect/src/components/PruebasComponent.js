@@ -20,7 +20,7 @@ export const PruebasComponent = () => {
     //Se ejecuta solo si cambia el usuario
     useEffect(() =>{
         console.log("Has realizado un cambio")
-    }, [us]);
+    }, [usuario]);
 
     const cambiarFecha = e =>{
         setFecha(new Date().toLocaleDateString());
