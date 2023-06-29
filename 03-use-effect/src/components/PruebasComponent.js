@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../App.css'
+import { AvisoCompont } from './AvisoCompont';
 
 export const PruebasComponent = () => {
 
@@ -42,6 +43,8 @@ export const PruebasComponent = () => {
 
             <button onClick={ cambiarFecha }>Cambiar Fecha</button>
         </p>
+
+        { usuario == "Americo" && <AvisoCompont/> }
     </div>
   )
 }
