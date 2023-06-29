@@ -5,9 +5,9 @@ import React, { useEffect, useState } from 'react'
 export const AjaxComponent = () => {
 
     const [usuarios, setUsuarios] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
   
-    const getUsuariosAjaxPms = () => {
+    /*const getUsuariosAjaxPms = () => {
       fetch("https://reqres.in/api/users?page=2")
         .then(respuesta => respuesta.json())
         .then((resultado_final => {
@@ -18,28 +18,52 @@ export const AjaxComponent = () => {
           console.log(error);
           setIsLoading(false);
         });
-    }
+    }*/
 
-    const getUsuariosAjaxAW = async() =>{
-        const peticion = await fetch("https://reqres.in/api/users?page=2");
-        const { data } = await peticion.json();
-        
-        setUsuarios(data);
+    const getUsuariosAjaxAW = () =>{
+
+        setTimeout(async () =>{
+            const peticion = await fetch("https://reqres.in/api/users?page=2");
+            const { data } = await peticion.json();
+            
+            setUsuarios(data);
+            setLoading(false);
+
+        }, 2000); 
+
+  
     }
   
     useEffect(() => {
       //getUsuariosAjaxPms();
         getUsuariosAjaxAW(); 
     }, []);
+    
+    if(loading == true){
+         //Cuando esta todo cargando
+        return(
+            <div>
+                Cargando datos...
+            </div>
+        );
+
+    } else {
+        //Cuando todo ha ido bien
+        return (
+            <div>
+            <h2>Listado de usuarios via Ajax</h2>
+    
+                <ol>
+                {usuarios.map(usuario => (
+                    <li key={usuario.id}>
+                        <img src={usuario.avatar} width="80"/>
+                        {usuario.first_name} {usuario.last_name}</li>
+                ))}
+                </ol>
+            </div>
+        );
+    }
+
+   
   
-    return (
-      <div>
-        <h2>Listado de usuarios via Ajax</h2>
-          <ol>
-            {usuarios.map(usuario => (
-              <li key={usuario.id}>{usuario.first_name} {usuario.last_name}</li>
-            ))}
-          </ol>
-      </div>
-    );
   };
