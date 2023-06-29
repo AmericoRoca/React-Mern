@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 
 export const AjaxComponent = () => {
-    
+
     const [usuarios, setUsuarios] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
   
@@ -19,23 +19,27 @@ export const AjaxComponent = () => {
           setIsLoading(false);
         });
     }
+
+    const getUsuariosAjaxAW = async() =>{
+        const peticion = await fetch("https://reqres.in/api/users?page=2");
+        const { data } = await peticion.json();
+        
+        setUsuarios(data);
+    }
   
     useEffect(() => {
-      getUsuariosAjaxPms();
+      //getUsuariosAjaxPms();
+        getUsuariosAjaxAW(); 
     }, []);
   
     return (
       <div>
         <h2>Listado de usuarios via Ajax</h2>
-        {isLoading ? (
-          <p>Cargando usuarios...</p>
-        ) : (
           <ol>
             {usuarios.map(usuario => (
               <li key={usuario.id}>{usuario.first_name} {usuario.last_name}</li>
             ))}
           </ol>
-        )}
       </div>
     );
   };
