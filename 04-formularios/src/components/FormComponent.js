@@ -26,6 +26,20 @@ export const FormComponent = () => {
         setExist(true)
     }
 
+    const cambiarDatos = e =>{
+        let name = e.target.name;
+        let usuarioMod = usuario;
+
+        //usuarioMod[name] = e.target.value;
+
+        setUsuario(estadoPrevio =>{(
+           
+                ...estadoPrevio,
+                [name]: e.target.value
+            
+        )});
+    }
+
     if(exist){
         return(
             <div>
@@ -41,8 +55,8 @@ export const FormComponent = () => {
         <h1>Formulario con React</h1>
 
         <form onSubmit={conseguirDatosForm}>
-            <input type="text" placeholder='nombre' name='nombre'/>
-            <input type="text" placeholder='apellido' name='apellido'/>
+            <input type="text" placeholder='nombre' name='nombre' onChange={cambiarDatos}/>
+            <input type="text" placeholder='apellido' name='apellido' onChange={cambiarDatos}/>
             <select name="genero">
                 <option value="hombre">Hombre</option>
                 <option value="mujer">Mujer</option>
