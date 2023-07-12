@@ -94,6 +94,7 @@ body{
 }
 
 .peli-item{
+    flex-grow: 1;
     margin: 20px;
     background: white;
     border-radius: 10px;
