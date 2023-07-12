@@ -1,3 +1,6 @@
+import { Listado } from "./components/Listado";
+import { Buscador } from "./components/Buscador";
+import { Crear } from "./components/Crear";
 
 
 function App() {
@@ -24,58 +27,24 @@ function App() {
             </nav>
 
             {/* contenido principal*/}
-
             <section className="content">
-                <article className="peli-item">
-                    <h3 className="title">Desarrollo web</h3>
-                    <p className="description"></p>
-                    <button className="edit">Edit</button>
-                    <button className="delete">Remove</button>
-                </article>
-                <article className="peli-item">
-                    <h3 className="title">Desarrollo web</h3>
-                    <p className="description"></p>
-                    <button className="edit">Edit</button>
-                    <button className="delete">Remove</button>
-                </article>
-                <article className="peli-item">
-                    <h3 className="title">Desarrollo web</h3>
-                    <p className="description"></p>
-                    <button className="edit">Edit</button>
-                    <button className="delete">Remove</button>
-                </article>
-                <article className="peli-item">
-                    <h3 className="title">Desarrollo web</h3>
-                    <p className="description"></p>
-                    <button className="edit">Edit</button>
-                    <button className="delete">Remove</button>
-                </article>
+              <Listado />
             </section>
+           
 
             {/*barra lateral */}
 
             <aside className="lateral">
-                <div className="search">
-                    <h3>Buscador</h3>
-                    <form>
-                        <input type="text"/>
-                        <button>Buscar</button>
-                    </form>
-                </div>
-                <div className="add">
-                    <h3 className="title">Añadir pelicula</h3>
-                    <form action="">
-                        <input type="text" placeholder="titulo"/>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                        <input type="submit" value="Enviar"/>
-                    </form>
-                
-                </div>
+
+              <Buscador />
+
+              <Crear />
+
             </aside>
 
             {/*footer*/}
             <footer className="footer">
-                &copy; Created by <a>americoroca.com</a>
+                &copy; Created by <a href="www.americoroca.com">americoroca.com</a>
             </footer>
       </div>
   );
