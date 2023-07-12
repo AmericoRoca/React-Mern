@@ -155,6 +155,21 @@ input[type="button"]{
   box-shadow: 0px 0px 6px #f6f7f9;
 }
 
+input[type="text"],
+textarea{
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 5px;
+  background: #ddd;
+  color: #454545;
+  width: 80%;
+  opacity: 4;
+  outline: 0;
+  border-color: transparent;
+}
+
 .lateral input[type="text"],
 .lateral input[type="text"],
 .lateral textarea{
@@ -196,4 +211,7 @@ input[type="button"]{
   .peli-item{
       width: 80%;
   }
+}
+.no-encontrado{
+  color: red;
 }
