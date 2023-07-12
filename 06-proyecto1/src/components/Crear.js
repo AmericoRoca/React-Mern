@@ -25,12 +25,41 @@ export const Crear = () => {
             titulo,
             descripcion
         };
-        
+        //guardar el estado
         setPeliState(peli);
+
+        //guardar en el almacenamiento local
+        guardarEnStorage(peli);
+        
+
+
+
+
 
     }
 
+    const guardarEnStorage = peli => {
+        //Conseguir los elementos del localStorage
+        let items = JSON.parse(localStorage.getItem("pelis"));
 
+        //Comprobar que sea un array
+        if(Array.isArray(items)){
+            //añadir un elemento nuevo
+            items.push(peli);
+        } else {
+            //Crear array con nueva peli
+            items = [peli];
+        }
+
+        //Guardar en el localStorage
+        localStorage.setItem("pelis",JSON.stringify(items))
+
+        //Devolver objeto
+        return peli;
+
+        console.log(peli)
+        
+    }
 
   return (
     <div className="add">
