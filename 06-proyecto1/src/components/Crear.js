@@ -56,8 +56,6 @@ export const Crear = () => {
 
         //Devolver objeto
         return peli;
-
-        console.log(peli)
         
     }
 
