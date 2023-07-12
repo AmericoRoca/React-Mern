@@ -4,9 +4,12 @@ export const Crear = () => {
 
     const tituloComponente = "Añadir pelicula";
 
-    const [ peliState, setPeliState ] = useState(
-       
-    );
+    const [ peliState, setPeliState ] = useState({
+        titulo:'',
+        descripcion: ''
+    });
+
+    const {titulo, descripcion} = peliState;
 
     const conseguirDatosForm = e => {
         e.preventDefault()
@@ -32,6 +35,10 @@ export const Crear = () => {
   return (
     <div className="add">
               <h3 className="title">{tituloComponente}</h3>
+
+              <strong>
+                {(titulo && descripcion) && "Has creado la pelicula: "+titulo}
+              </strong>
                 
               <form action="" onSubmit={conseguirDatosForm}>
                   <input 
