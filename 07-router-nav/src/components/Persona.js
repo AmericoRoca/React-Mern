@@ -3,8 +3,6 @@ import { useParams } from 'react-router-dom'
 
 export const Persona = () => {
 
-
-    {/*Valores por defect*/}
     const {nombre = "Americo", apellido = "Chiclana"} = useParams();
 
 
