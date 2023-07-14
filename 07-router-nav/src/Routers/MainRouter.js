@@ -60,6 +60,7 @@ export const MainRouter = () => {
             <Route path="/redirigir" element={<Navigate to="/persona/americo/chiclana"/>}/>
             <Route path='*' element={<Error/>}/>
             <Route path='/panel' element={<PanelControl/>}>
+                <Route index element={<InicioPanel/>}/>
                 <Route path='inicio' element={<InicioPanel/>}/>
                 <Route path='crear' element={<Crear/>}/>
                 <Route path='gestion' element={<Gestion/>}/>
