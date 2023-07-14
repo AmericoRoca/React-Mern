@@ -44,6 +44,7 @@ export const MainRouter = () => {
             <Route path='/inicio' element={<Inicio/>}/>
             <Route path='/articulos' element={<Articulos/>}/>
             <Route path='/contact' element={<Contacto/>}/>
+            <Route path='/persona/:nombre/:apellido' element={<Persona/>}/>
             <Route path='/persona/:nombre' element={<Persona/>}/>
             <Route path='*' element={<Error/>}/>
         </Routes>
