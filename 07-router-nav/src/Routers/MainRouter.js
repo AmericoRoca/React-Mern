@@ -8,7 +8,8 @@ import { Error } from '../components/Error'
 export const MainRouter = () => {
   return (
     <BrowserRouter>
-
+    
+      {/*Cargar componentes */}
         <Routes>
             <Route path='/' element={<Inicio/>}/>
             <Route path='/inicio' element={<Inicio/>}/>
