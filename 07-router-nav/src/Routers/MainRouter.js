@@ -12,15 +12,23 @@ export const MainRouter = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/inicio">Inicio</NavLink>
+            <NavLink 
+              to="/inicio" 
+              className={({isActive}) => isActive ? "activado" : ""}
+            >Inicio</NavLink>
           </li>
           <li>
-            <NavLink to="/articulos">Articulos</NavLink>
+            <NavLink 
+              to="/articulos"
+              className={({isActive}) => isActive ? "activado" : ""}
+            >Articulos</NavLink>
           </li>
           <li>
-            <NavLink to="/contact">Contacto</NavLink>
+            <NavLink 
+              to="/contact"
+              className={({isActive}) => isActive ? "activado" : ""}
+            >Contacto</NavLink>
           </li>
-          <li></li>
         </ul>
       </nav>
       {/*Cargar componentes */}
