@@ -4,6 +4,7 @@ import { Articulos } from '../components/Articulos'
 import { Contacto } from '../components/Contacto'
 import { Inicio } from '../components/Inicio'
 import { Error } from '../components/Error'
+import { Persona } from '../components/Persona'
 
 export const MainRouter = () => {
   return (
@@ -29,6 +30,12 @@ export const MainRouter = () => {
               className={({isActive}) => isActive ? "activado" : ""}
             >Contacto</NavLink>
           </li>
+          <li>
+            <NavLink 
+              to="/persona"
+              className={({isActive}) => isActive ? "activado" : ""}
+            >Persona</NavLink>
+          </li>
         </ul>
       </nav>
       {/*Cargar componentes */}
@@ -37,6 +44,7 @@ export const MainRouter = () => {
             <Route path='/inicio' element={<Inicio/>}/>
             <Route path='/articulos' element={<Articulos/>}/>
             <Route path='/contact' element={<Contacto/>}/>
+            <Route path='/persona/:nombre' element={<Persona/>}/>
             <Route path='*' element={<Error/>}/>
         </Routes>
 
