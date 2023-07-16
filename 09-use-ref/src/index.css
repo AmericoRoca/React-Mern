@@ -96,3 +96,9 @@ code {
   color: black;
 }
 
+.mi-caja{
+  border: 1px solid black;
+}
+.cambio-caja{
+  background-color: green;
+} 
